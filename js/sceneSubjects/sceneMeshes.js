@@ -4,7 +4,7 @@ function SceneMeshes(scene) {
   const HexagonGeometry = Hexagon()
 
   const groundGeometry = new THREE.PlaneGeometry(100, 100, 4)
-  const groundMaterial = new THREE.MeshPhongMaterial({color: 0xffffff})
+  const groundMaterial = new THREE.MeshPhongMaterial({color: 0x666666})
   const plane = new THREE.Mesh(groundGeometry, groundMaterial)
   plane.receiveShadow = true
   scene.add(plane)

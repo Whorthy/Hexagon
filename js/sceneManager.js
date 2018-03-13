@@ -39,15 +39,14 @@ function SceneManager(canvas) {
     const nearPlane = 0.1
     const farPlane = 1000
     const camera = new THREE.PerspectiveCamera(fov, aspectRatio, nearPlane, farPlane)
-    camera.position.z = 8
-    camera.position.y = 5
+    camera.position.set(5,7,14)
 
     return camera
   }
 
   function createControls(camera) {
     const controls = new THREE.OrbitControls(camera)
-    controls.target.set(0,2,0)
+    controls.target.set(6,4,0)
 
     return controls
   }
