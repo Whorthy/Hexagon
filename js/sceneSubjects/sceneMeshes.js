@@ -10,7 +10,7 @@ function SceneMeshes(scene) {
   scene.add(plane)
   plane.rotation.x = - (pi / 2)
 
-  const cubeGeometry = new THREE.CylinderGeometry( 1,1,2,6)
+  const cubeGeometry = new THREE.CylinderGeometry( .7,.7,1.5,6)
   const cubeMaterial = new THREE.MeshBasicMaterial({color: 0xffffff})
   const cube = new THREE.Mesh(cubeGeometry, cubeMaterial)
   cube.castShadow = false

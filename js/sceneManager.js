@@ -2,6 +2,8 @@ function SceneManager(canvas) {
 
   let then = new Date().getTime() / 100 
 
+  const pi = 3.1415
+
   const screenDimensions = {
     width: canvas.width,
     height: canvas.height 
@@ -12,6 +14,7 @@ function SceneManager(canvas) {
   const camera = buildCamera(screenDimensions)
   const controls = createControls(camera)
   const sceneSubjects = createSceneSubjects(scene)
+
 
   function buildScene() {
     const scene = new THREE.Scene()
@@ -39,14 +42,16 @@ function SceneManager(canvas) {
     const nearPlane = 0.1
     const farPlane = 1000
     const camera = new THREE.PerspectiveCamera(fov, aspectRatio, nearPlane, farPlane)
-    camera.position.set(5,7,14)
+    camera.position.set(4,7,14)
+    camera.rotation.order = 'YXZ'
+    camera.rotation.y = 0
 
     return camera
   }
 
   function createControls(camera) {
     const controls = new THREE.OrbitControls(camera)
-    controls.target.set(6,4,0)
+    controls.target.set(3,4,3)
 
     return controls
   }
@@ -86,5 +91,9 @@ function SceneManager(canvas) {
     camera.updateProjectionMatrix();
 
     renderer.setSize(width, height)
+  }
+
+  function setCameraPosition() {
+
   }
 }
