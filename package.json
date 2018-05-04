@@ -4,8 +4,8 @@
   "description": "portfolio",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "start": "gulpdev",
-    "build": "npm install gulp-cli && gulp build"
+    "start": "gulp dev",
+    "build": "gulp build"
   },
   "author": "tom.moraiz@hetic.net",
   "license": "MIT",

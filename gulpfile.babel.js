@@ -2,7 +2,7 @@ import gulp from 'gulp'
 import babelify from 'babelify'
 import browserify from 'browserify'
 import browserSync from 'browser-sync'
-import source from 'vinyl-source-stream';
+import source from 'vinyl-source-stream'
 
 gulp.task("html", () => {
   return gulp.src("./app/*.html")
@@ -13,12 +13,6 @@ gulp.task("html", () => {
 gulp.task("libs", () => {
   return gulp.src("./app/libs/*.js")
       .pipe(gulp.dest("./build/libs"))
-      .pipe(browserSync.stream());
-});
-
-gulp.task("css", () => {
-  return gulp.src("./app/css/*.css")
-      .pipe(gulp.dest("./build/css"))
       .pipe(browserSync.stream());
 });
 
@@ -39,13 +33,12 @@ gulp.task("startServer", () => {
   browserSync.init({
       server: "./build"
   });
-});
-
+})
 gulp.task('watch', () => {
   gulp.watch('./app/*.html', ['html']);
   gulp.watch(['./app/js/**/*.js'], ['js']);
   gulp.watch(['./app/css/**/*.scss'], ['styles']);
 });
 
-gulp.task("build", ["html", "libs", "js", "css"]);
+gulp.task("build", ["html", "libs", "js"]);
 gulp.task("dev", ["build", "startServer", "watch"]);

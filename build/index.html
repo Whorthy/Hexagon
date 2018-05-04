@@ -2,7 +2,22 @@
   <head>
     <meta charset="utf-8">
     <title>Hexagon</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+      }
+
+      p {
+        position: absolute;
+        top: 4px;
+        width: 100vw;
+        text-align: center;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <canvas id="renderCanvas"></canvas>
@@ -11,12 +26,6 @@
     <script type="text/javascript" src="../libs/orbitControls.js"></script>
     <script type="text/javascript" src="../libs/cannon.min.js"></script>
 
-    <!-- <script type="text/javascript" src="js/sceneSubjects/hexagon.js"></script>
-    <script type="text/javascript" src="js/sceneSubjects/sceneLights.js"></script>
-    <script type="text/javascript" src="js/sceneSubjects/scenePhysics.js"></script>
-    <script type="text/javascript" src="js/sceneSubjects/sceneMeshes.js"></script>
-    <script type="text/javascript" src="js/sceneSubjects/sceneSubjects.js"></script>
-    <script type="text/javascript" src="js/sceneManager.js"></script> -->
     <script type="text/javascript" src="js/bundle.js"></script>
 
     <p>left-click : headlook</p>
