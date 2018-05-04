@@ -1,0 +1,13 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+p {
+  position: absolute;
+  top: 4px;
+  width: 100vw;
+  text-align: center;
+  color: white;
+}
