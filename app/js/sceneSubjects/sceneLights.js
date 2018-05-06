@@ -3,7 +3,7 @@ export function SceneLights(scene) {
   const generalLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0)
   scene.add(generalLight)
 
-  const ballLight = new THREE.PointLight(0xffffff, 1, 20, 2)
+  const ballLight = new THREE.PointLight(0xffffff, 1, 30, 2)
   ballLight.castShadow = true;
   ballLight.position.set(0,3.5,1)
   scene.add(ballLight)

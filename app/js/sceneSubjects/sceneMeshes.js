@@ -88,6 +88,30 @@ export function SceneMeshes(scene) {
   hexa11.position.set(0,2,-3)
   hexa12.position.set(-1.7,1,-3)
 
+  for (var i = 2; i < 20; i++) {
+    for (var j = 0; j<6; j++) {
+      var angle = (j*60) * pi / 180
+      var rayon = i * 1.75
+      var group = new THREE.Group()
+      for (var k = 0; k < i; k++) {
+        var hex = new THREE.Mesh(hexaGeometry, hexaMaterial)
+        hex.position.x = (1.75 * i) - (.875 * k) 
+        hex.position.z = 1.51 * k
+        hex.position.y = Math.random()
+        /* var test = Math.random()
+        if (test < .1) {
+          hex.position.y = Math.random() +1
+        } */
+        console.log(hex.position.y)
+        group.add(hex)
+        hex.castShadow = true
+        hex.receiveShadow = true
+      }
+      scene.add(group)
+      group.rotation.y = angle
+    }
+  } 
+
   const meshes = {
     plane: plane,
     cube: cube
