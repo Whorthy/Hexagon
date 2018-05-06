@@ -70,13 +70,13 @@ export function SceneManager(canvas) {
     let delta = now - then
     let frameTime = 60 / 1000
     
-    if (delta > frameTime ) {
+/*     if (delta > frameTime ) {
       let frameNumber = delta / frameTime
       for (var i = 1; i < frameNumber; i++) {
         sceneSubjects.update()
       }
-    }
-
+    } */
+    sceneSubjects.update()
     renderer.render(scene, camera)
     controls.update()
     
